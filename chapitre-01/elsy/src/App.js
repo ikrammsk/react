@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import Steps from'./components/Steps'
+import Box from'./components/Box'
 import './styles/global.css'
 
 const tempMin = - 20
@@ -18,9 +18,27 @@ class App extends React.Component {
     return (
       <div class="container-fluid">
         <div class="row">
-          <Steps>
+         {/*  Water */}
+          <Box>
             
-          </Steps>
+          </Box>
+
+         {/*  Step */}
+          <Box>
+            
+          </Box>
+
+         {/*  Heart */}
+          <Box>
+            
+          </Box>
+
+         {/*  Temperature */}
+
+          <Box>
+            
+          </Box>
+          
           <p>
             {`Heart : ${heartMin}`}
           </p>
