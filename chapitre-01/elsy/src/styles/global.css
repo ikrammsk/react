@@ -1,8 +1,8 @@
-.boxpairs{
+.box:nth-child(odd){
     background-color: #cccccc;
 
 }
-.boximpairs{
+.box:nth-child(even){
     background-color: #aaaaaa;
 }
 .box {
