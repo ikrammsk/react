@@ -14,7 +14,18 @@ const stepMax = 50000
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature: -10,
+      steps: 3000,
+
+    };
+  }
   render() {
+
     return (
       <div class="container-fluid">
 
