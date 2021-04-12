@@ -1,5 +1,6 @@
 import React from "react";
 import '../src/App.css'
+import Counter from './components/Counter'
 
 
 class App extends React.Component {
@@ -7,24 +8,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       count: 0,
-      bgColor: "black"
 
     };
 
 
 
-    this.decrement = this.decrement.bind(this);
-    this.increment = this.increment.bind(this);
+    this.decrementCount = this.decrementCount.bind(this);
+    this.incrementCount = this.incrementCount.bind(this);
 
 
   }
-  decrement() {
+  decrementCount() {
     this.setState({
       count: this.state.count - 1
     });
   };
 
-  increment() {
+  incrementCount() {
     this.setState({
       count: this.state.count + 1
     });
@@ -35,9 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Counter</h1>
-        <h2> {this.state.count} </h2>
-        <button className='moins' onClick={this.decrement}>-</button>
-        <button className='plus' onClick={this.increment}>+</button>
+       <Counter count ={this.state.count} removeFunction = {this.decrementCount} addFunction = {this.incrementCount}></Counter>
       </div>
     )
   }
