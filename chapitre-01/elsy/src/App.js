@@ -49,6 +49,9 @@ class App extends React.Component {
 
   }
   calculateWater(){
+    this.setState({
+      water : 
+    })
 
   }
 
