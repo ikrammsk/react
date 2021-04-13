@@ -37,15 +37,18 @@ class App extends React.Component {
 
   }
   onStepChange(e) {
-    this.setState({
-      step : e.target.value
+      this.setState({
+      steps : e.target.value
     })
 
   } 
-  onTempChange(e) {
+  onTempChange(e){
     this.setState({
       temperature : e.target.value
     })
+
+  }
+  calculateWater(){
 
   }
 
