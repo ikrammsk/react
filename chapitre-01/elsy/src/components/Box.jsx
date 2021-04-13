@@ -31,11 +31,6 @@ export default Box;
 
 
 
-
-
-
-
-
 // if (this.props.unit !== "L") {
 //     return (
 //         <div class="box col-sm-3 col-6">
