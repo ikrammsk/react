@@ -8,12 +8,16 @@ class Button extends React.Component {
 
 
     render() { 
+        return(
+            <div>
+
+                < button onClick = {this.props.onClick}></button>
 
 
-        
+            </div>
+        )
 
-
-
+    
 
     };
 }
@@ -22,3 +26,8 @@ class Button extends React.Component {
 
 
 export default Button;
+
+
+// {this.props.isSelected}
+
+// {this.props.children}
