@@ -27,6 +27,7 @@ class App extends React.Component {
     this.onHeartChange = this.onHeartChange.bind(this);
     this.onStepChange = this.onStepChange.bind(this);
     this.onTempChange = this.onTempChange.bind(this)
+    this.calculateWater=this.calculateWater.bind(this)
   }
 
 
@@ -48,11 +49,17 @@ class App extends React.Component {
     })
 
   }
-  calculateWater(){
-    this.setState({
-      water : 
-    })
 
+  calculateWater(){
+    
+      Water = 0 ;
+
+      if (this.state.temperature > 20) {
+        Water = (this.state.temperature - 20) * 0.02;
+      }
+
+    
+    
   }
 
   render() {
