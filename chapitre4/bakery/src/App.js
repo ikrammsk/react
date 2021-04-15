@@ -16,30 +16,65 @@ class App extends React.Component {
 
     };
   }
+  selectAdd() {
+    this.setState({ activeTab: 'Add' });
+  }
+
+  selectList() {
+    this.setState({ activeTab: 'List' });
+  }
+
+  selectPay() {
+    this.setState({ activeTab: 'Pay' });
+  }
+
+  viewFunction() {
+
+    if (this.state.activeTab === "Add") {
+      return (
+        <Add />
+      )
+
+    } else if (this.state.activeTab === "List") {
+      return (
+        <List />
+      )
+
+    } else {
+      return (
+        <Pay />
+      )
+    }
+
+  }
+
+
+
   render() {
+
     return (
-    
-    
-    <div class="container-center">
-
-      <div class="row">
 
 
-        {/*  Add */}
+      <div class="container-center">
 
-        <Button isSelected= {this.state.activeTab} onClick>Add</Button>
+        <div class="row">
 
-        {/*  List */}
 
-        <Button isSelected = {this.state.activeTab} onClick >List</Button>
+          {/*  Add */}
 
-        {/*  Pay */}
+          <Button isSelected={this.state.activeTab} onClick={this.selectAdd}>Add</Button>
 
-        <Button isSelected = {this.state.activeTab} onClick>Pay</Button>
-        
+          {/*  List */}
+
+          <Button isSelected={this.state.activeTab} onClick={this.selectList} >List</Button>
+
+          {/*  Pay */}
+
+          <Button isSelected={this.state.activeTab} onClick={this.selectPay}>Pay</Button>
+
+        </div>
+
       </div>
-
-    </div>
     );
   }
 }
