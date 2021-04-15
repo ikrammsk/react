@@ -1,6 +1,9 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from './components/Button'
+import Button from './components/Button';
+import Add from './components/Add'
+import List from './components/List';
+import Pay from './components/Pay'
 
 
 class App extends React.Component {
@@ -17,22 +20,22 @@ class App extends React.Component {
     return (
     
     
-    <div class="container-fluid">
+    <div class="container-center">
 
       <div class="row">
 
-        {/*  List */}
-
-        <Button></Button>
 
         {/*  Add */}
 
-        <Button></Button>
+        <Button isSelected= {this.state.activeTab} onClick>Add</Button>
 
+        {/*  List */}
+
+        <Button isSelected = {this.state.activeTab} onClick >List</Button>
 
         {/*  Pay */}
 
-        <Button></Button>
+        <Button isSelected = {this.state.activeTab} onClick>Pay</Button>
         
       </div>
 

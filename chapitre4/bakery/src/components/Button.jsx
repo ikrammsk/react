@@ -7,17 +7,20 @@ import React from "react";
 class Button extends React.Component {
 
 
-    render() { 
-        return(
+    render() {
+        return (
             <div>
 
-                < button onClick = {this.props.onClick}></button>
+                < button isSelected={this.props.isSelected}
+                    onClick={this.props.onClick}
+                    children={this.props.children}
+                ></button>
 
 
             </div>
         )
 
-    
+
 
     };
 }
@@ -27,7 +30,3 @@ class Button extends React.Component {
 
 export default Button;
 
-
-// {this.props.isSelected}
-
-// {this.props.children}
