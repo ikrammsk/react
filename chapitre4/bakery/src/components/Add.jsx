@@ -8,10 +8,11 @@ class Add extends React.Component {
 
 
     render() { 
+        return(
 
         <div>Add</div>
 
-
+        )
 
 
     };
