@@ -31,23 +31,23 @@ class App extends React.Component {
   renderHead() {
     return (
 
-        <div>
+      <div>
 
 
-          {/*  Add */}
+        {/*  Add */}
 
-          <Button isSelected={this.state.activeTab} onClick={this.selectAdd}>Add</Button>
+        <Button isSelected={this.state.activeTab} onClick={this.selectAdd}>Add</Button>
 
-          {/*  List */}
+        {/*  List */}
 
-          <Button isSelected={this.state.activeTab} onClick={this.selectList} >List</Button>
+        <Button isSelected={this.state.activeTab} onClick={this.selectList} >List</Button>
 
-          {/*  Pay */}
+        {/*  Pay */}
 
-          <Button isSelected={this.state.activeTab} onClick={this.selectPay}>Pay</Button>
+        <Button isSelected={this.state.activeTab} onClick={this.selectPay}>Pay</Button>
 
-        </div>
-      
+      </div>
+
     )
   }
 
@@ -55,20 +55,20 @@ class App extends React.Component {
     if (this.state.activeTab === 'Add') {
       return (
 
-        <h2><Add /></h2>
+        <Add />
 
       );
     } else if (this.state.activeTab === 'List')
       return (
 
-        <h2><List /></h2>
+        <List />
 
       );
 
     else if (this.state.activeTab === 'Pay')
       return (
 
-        <h2><Pay /></h2>
+        <Pay />
 
       )
   }
@@ -79,9 +79,6 @@ class App extends React.Component {
     return (
 
       <div>
-        <Button />
-        <Button />
-        <Button />
         {this.renderHead()}
         {this.renderContent()}
       </div>
