@@ -13,43 +13,43 @@ class Add extends React.Component {
 
 
         };
+        this.updateProductName = this.updateProductName.bind(this);
+        this.updatePrice = this.updatePrice.bind(this);
     }
 
 
 
-updateProductName(events){
-    if (events.target.type === "text") {
+    updateProductName(events) {
         this.setState({
             productName: events.target.value
         })
-
     }
-}
 
-updatePrice(eventsP){
-    if (eventsP.target.type === "range") {
+    updatePrice(eventsP) {
         this.setState({
             price: eventsP.target.value
         })
 
     }
-}
 
 
-render() {
-    return (
+    render() {
+        return (
 
-        <div>
-            <div>Add</div>
-            <input type="text" onChange={this.updateProductName}></input>
-            <input type="range" onChange={this.updatePrice}></input>
-        </div>
+            <div>
+
+                <input type="text" onChange={this.updateProductName}></input>
+                <input type="range" min= {1} max= {10} onChange={this.updatePrice}></input>
+                <button type='Add' class="btn btn-outline-danger"
+                    onClick={() => this.addItem(this.state.productName, this.state.price)}>Add</button>
+
+            </div>
 
 
-    )
+        )
 
 
-};
+    };
 }
 
 

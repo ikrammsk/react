@@ -15,7 +15,13 @@ class App extends React.Component {
 
 
     };
+    this.selectAdd = this.selectAdd.bind(this);
+    this.selectList = this.selectList.bind(this);
+    this.selectPay = this.selectPay.bind(this);
+    this.addItem = this.addItem.bind(this)
   }
+
+
   selectAdd() {
     this.setState({ activeTab: 'Add' });
   }
@@ -28,23 +34,27 @@ class App extends React.Component {
     this.setState({ activeTab: 'Pay' });
   }
 
+  addItem(name, price) {
+
+  }
+
   renderHead() {
     return (
 
-      <div>
+      <div class="row justify-content-md-center">
 
 
         {/*  Add */}
 
-        <Button isSelected={this.state.activeTab} onClick={this.selectAdd}>Add</Button>
+        <button class="btn btn-outline-danger" isSelected={this.state.activeTab} onClick={this.selectAdd}>Add</button>
 
         {/*  List */}
 
-        <Button isSelected={this.state.activeTab} onClick={this.selectList} >List</Button>
+        <button class="btn btn-danger" isSelected={this.state.activeTab} onClick={this.selectList}>List</button>
 
         {/*  Pay */}
 
-        <Button isSelected={this.state.activeTab} onClick={this.selectPay}>Pay</Button>
+        <button class="btn btn-outline-danger" isSelected={this.state.activeTab} onClick={this.selectPay}>Pay</button>
 
       </div>
 
@@ -78,12 +88,18 @@ class App extends React.Component {
 
     return (
 
-      <div>
-        {this.renderHead()}
-        {this.renderContent()}
+      <div class="container">
+        <h1 class="row justify-content-md-center text-danger ">Bakery</h1>
+        <div class="row justify-content-md-center alert alert-danger" role="alert">
+          {/* <Button></Button>
+          <Button></Button>
+          <Button></Button> */}
+          <div>
+            {this.renderHead()}
+            {this.renderContent()}
+          </div>
+        </div>
       </div>
-
-
     )
   }
 }
