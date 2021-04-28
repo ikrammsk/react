@@ -7,9 +7,13 @@ import React from "react";
 class Button extends React.Component {
 
     render() {
+        const countryName = this.props.children
+        
         return (
-                <button onClick = {this.props.onClick} 
-                        Children={this.props.children}></button>
+            <button type="button" class="btn btn-prymary"
+                onClick={()=> this.props.onClick(countryName)}>
+                {countryName}
+            </button>
         )
     }
 }
