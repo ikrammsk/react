@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Button from './components/Button'
+import Card from './components/Card'
 
 class App extends React.Component {
     constructor() {
@@ -68,14 +69,16 @@ class App extends React.Component {
                 <Button onClick={this.getCountry}>Brazil</Button>
                 <Button onClick={this.getCountry}>Croatia</Button>
 
-                <p> Name : {this.state.name}</p>
-                <p> Capital : {this.state.capital}</p>
-                <p> Flag : <img className="img"src={this.state.flag}alt="drapeau fr"></img></p>
-                <p> Population : {this.state.population}</p>
-                <p> Region : {this.state.region}</p>
+
+                <Card name={this.state.name} 
+                capital={this.state.capital} 
+                flag={this.state.flag} 
+                population={this.state.population} 
+                region={this.state.region} />
+            </div>
 
 
-            </div >
+
         )
     }
 }
