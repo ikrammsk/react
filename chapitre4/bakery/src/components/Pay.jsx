@@ -17,12 +17,24 @@ class Pay extends React.Component {
             totalTTC: 0
         }
     }
+    handleSelect(name, price) {
+
+        console.log(name);
+        console.log(price);
+    }
 
     render() {
         return (
 
-
-            <div>Pay</div>
+            <div>
+                <p>{this.state.total}
+                    {this.props.items.map((elem => {
+                        return <Card itemName={elem.name}
+                            price={elem.price}
+                            onClick={this.handleSelect} />
+                    }))}
+                </p>
+            </div>
 
         )
 
